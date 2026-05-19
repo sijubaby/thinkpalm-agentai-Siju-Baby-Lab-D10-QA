@@ -1,0 +1,16 @@
+Test Case ID,Module,Feature,Test Scenario,Preconditions,Test Steps,Test Data,Expected Result,Priority,Severity,Test Type
+TC_SHIP_001,Ship Management,Add Ship,Verify user can successfully add a ship with valid mandatory details,User logged in with valid access,Navigate to Add Ship screen -> Enter mandatory fields -> Click Save,Valid ship data,Ship created successfully with success message,High,Critical,Smoke
+TC_SHIP_002,Ship Management,Add Ship,Verify mandatory validation for Select Company,User on Add Ship screen,Leave Company blank and click Save,Blank Company,Validation message displayed,High,Major,Functional
+TC_SHIP_003,Ship Management,Ship IMO Validation,Verify invalid IMO number format validation,User on Add Ship screen,Enter invalid IMO and click Save,ABC123,Invalid IMO validation displayed,High,Major,Validation
+TC_SHIP_004,Ship Management,Ship IMO Validation,Verify duplicate IMO number cannot be added,Existing IMO available,Enter duplicate IMO and save,Duplicate IMO,System prevents duplicate ship creation,High,Critical,Negative
+TC_SHIP_005,Ship Management,Ship Email Validation,Verify invalid ship email format validation,User on Add Ship screen,Enter invalid email and click Save,shipmail.com,Invalid email validation displayed,Medium,Major,Validation
+TC_SHIP_006,Ship Management,Notification Email,Verify multiple notification emails can be added,User on Add Ship screen,Click Add Notification Email and enter multiple emails,multiple@test.com,Additional email fields added successfully,Medium,Minor,Functional
+TC_SHIP_007,Ship Management,Date Validation,Verify Contract End Date mandatory validation,User on Add Ship screen,Leave date blank and save,Blank Date,Mandatory validation displayed,High,Major,Validation
+TC_SHIP_008,Ship Management,Navigation,Verify Cancel button functionality,Unsaved data exists,Enter data and click Cancel,Valid data,Changes discarded successfully,Medium,Minor,Functional
+TC_SHIP_009,Ship Management,Navigation,Verify Back button functionality,User on Add Ship screen,Click Back button,N/A,Navigates to previous page,Medium,Minor,UI
+TC_SHIP_010,Ship Management,Security,Verify unauthorized users cannot access Add Ship page,User not logged in,Access URL directly,Direct URL,Access restricted,High,Critical,Security
+TC_SHIP_011,Ship Management,UI Validation,Verify all mandatory fields are marked with *,User on Add Ship screen,Observe mandatory fields,N/A,Mandatory fields indicated properly,Low,Minor,UI
+TC_SHIP_012,Ship Management,Responsive Validation,Verify Add Ship screen responsiveness on mobile,Mobile viewport,Open screen on mobile,Mobile resolution,UI responsive without overlap,Medium,Minor,Responsive
+TC_SHIP_013,Ship Management,Database Validation,Verify saved ship details persist correctly,Ship added successfully,Save ship and validate DB,Valid ship details,Database stores correct information,High,Major,Backend
+TC_SHIP_014,Ship Management,Error Handling,Verify meaningful validation messages are displayed,Validation failure triggered,Trigger invalid input validation,Invalid inputs,User-friendly error displayed,Medium,Minor,Validation
+TC_SHIP_015,Ship Management,Accessibility,Verify keyboard navigation works,User on Add Ship screen,Use Tab key navigation,Keyboard input,All fields accessible using keyboard,Medium,Minor,Accessibility
